@@ -52,12 +52,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr th:each="productos:${productos}">
-        <td th:text="${productos.nombre}"></td>
-        <td th:text="${productos.descripcion}"></td>
-        <td th:text="${productos.cantidad}"></td>
-        <td th:text="${productos.precio}"></td>
-        <td><a  class="btn btn-warning" href="">Editar</a> </td>
+      <tr th:each="producto:${productos}">
+        <td th:text="${producto.nombre}"></td>
+        <td th:text="${producto.descripcion}"></td>
+        <td th:text="${producto.cantidad}"></td>
+        <td th:text="${producto.precio}"></td>
+        <td><a  class="btn btn-warning" th:href="@{productos/edit/{id} (id=${producto.id})}">Editar</a> </td>
         <td><a  class="btn btn-danger" href="">Eliminar</a> </td>
       </tr>       
     </tbody>
